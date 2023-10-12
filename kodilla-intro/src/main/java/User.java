@@ -1,23 +1,18 @@
 public class User {
     String name;
     int age;
+    public User(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
     public static void main(String[] args) {
-        User[] user = new User[4];
+        User martyna = new User("Martyna", 33);
+        User dominika = new User("Dominika", 51);
+        User hanna = new User("Hanna", 25);
+        User jagoda = new User("Jagoda", 30);
 
-        user[0] = new User();
-        user[1] = new User();
-        user[2] = new User();
-        user[3] = new User();
-
-        user[0].name = "Martyna";
-        user[1].name = "Dominika";
-        user[2].name = "Jagoda";
-        user[3].name = "Hanna";
-        user[0].age = 33;
-        user[1].age = 51;
-        user[2].age = 25;
-        user[3].age = 30;
+        User[] user = {martyna,dominika,hanna,jagoda};
 
         double sum = 0.00;
         for (int i = 0; i < user.length; i++) {
