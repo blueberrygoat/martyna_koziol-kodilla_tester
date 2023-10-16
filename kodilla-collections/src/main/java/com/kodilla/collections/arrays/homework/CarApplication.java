@@ -22,7 +22,7 @@ public class CarApplication {
     public static Car drawCar() {
         Random random = new Random();
         int drawnCar = RANDOM.nextInt(3);
-        double speed = getRandomSpeed(random);
+        double speed = getRandomSpeed();
         if (drawnCar == 0)
             return new Ford((int) speed);
         else if (drawnCar == 1)
@@ -32,7 +32,7 @@ public class CarApplication {
         }
     }
 
-    private static double getRandomSpeed(Random random) {
+    private static double getRandomSpeed() {
         return RANDOM.nextDouble() * 100 + 100;
     }
 }
