@@ -19,11 +19,12 @@ public class FlightFinderTestSuite {
     }
     @Test
     public void testFindingFlightsTo() {
-    FlightFinder flightFinder = new FlightFinder();
+        //given
+        FlightFinder flightFinder = new FlightFinder();
         flightFinder.findFlightsTo("Paryż");
-    //when
-    List<Flight> result = flightFinder.findFlightsTo("Paryż");
-    //then
-    assertEquals(2, result.size());
-}
+        //when
+        List<Flight> result = flightFinder.findFlightsTo("Paryż");
+        //then
+        assertEquals(2, result.size());
+    }
 }
