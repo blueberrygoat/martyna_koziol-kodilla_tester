@@ -14,13 +14,17 @@ public class Application {
 
 
         for (Student student: students) {
-            Optional<Teacher> optionalTeacher = Optional.ofNullable(student.getTeacher());
+            String name = getTeacherName(student);
 
-
-            System.out.println("uczeń:" + student.getName() + ", " +
-                    "nauczuciel:" + optionalTeacher.orElse(new Teacher("<undefined>")).getName());
+            System.out.println("uczeń:" + student.getName() + ", nauczyciel:" + name );
             
         }
 
+    }
+
+    public static String getTeacherName(Student student) {
+        Optional<Teacher> optionalTeacher = Optional.ofNullable(student.getTeacher());
+        String name = optionalTeacher.orElse(new Teacher("<undefined>")).getName();
+        return name;
     }
 }
