@@ -10,7 +10,7 @@ public class WarehouseApp {
         warehouse.addOrder(new Order("543"));
 
        try{
-           Order order = warehouse.getOrder("345");
+           Order order = warehouse.getOrder("3");
            System.out.println("Order no. " + order.getNumber() + " is found");
        }
        catch (OrderDoesntExistException e){
