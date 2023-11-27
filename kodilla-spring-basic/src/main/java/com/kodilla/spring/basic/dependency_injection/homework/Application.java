@@ -5,6 +5,6 @@ public class Application {
         DeliveryService deliveryService = new DeliveryInPost();
         NotificationService notificationService = new NotificationInPost();
         ShippingCenter shippingCenter = new ShippingCenter(deliveryService,notificationService);
-        shippingCenter.sendPackage("Hill Street 11, New York", 18.2);
+        shippingCenter.sendPackage("Hill Street 11, New York", 35);
     }
 }
