@@ -37,8 +37,8 @@ public class IsItFizzOrBuzzSteps {
     public void i_check_the_number() {
         this.answer = checkIfDivisible(this.number);
     }
-    @Then("I should be told {string}")
-    public void i_should_be_told(String string) {
+    @Then("It is {string}")
+    public void it_is(String string) {
         assertEquals(string, this.answer);
     }
 }
